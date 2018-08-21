@@ -40,9 +40,9 @@ function concertThis() {
       };
       var data = JSON.parse(body);
       for (var i = 0; i < 3; i++) {
-        console.log(("Venue:    ") + data[i].venue.name);
-        console.log(("Location: ") + data[i].venue.city + ", " + data[i].venue.country);
-        console.log(("Date:     ") + moment(data[i].datetime, 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        console.log(("Venue    ") + data[i].venue.name);
+        console.log(("Location ") + data[i].venue.city + ", " + data[i].venue.country);
+        console.log(("Date     ") + moment(data[i].datetime, 'YYYY-MM-DD').format('MM/DD/YYYY'));
       };
     };
   });
@@ -65,9 +65,9 @@ function spotifyThisSong() {
     var artist = data.tracks.items[0].artists[0].name;
     var album = data.tracks.items[0].album.name;
     var preview = data.tracks.items[0].preview_url;
-    console.log(("Title:  ") + name);
-    console.log(("Artist: ") + artist);
-    console.log(("Album:  ") + album);
+    console.log(("Title  ") + name);
+    console.log(("Artist ") + artist);
+    console.log(("Album  ") + album);
     if (preview) {
       console.log("Preview ") + preview;
     } else {
