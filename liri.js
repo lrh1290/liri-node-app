@@ -40,9 +40,10 @@ function concertThis() {
       };
       var data = JSON.parse(body);
       for (var i = 0; i < 3; i++) {
-        console.log(("Venue    ") + data[i].venue.name);
-        console.log(("Location ") + data[i].venue.city + ", " + data[i].venue.country);
-        console.log(("Date     ") + moment(data[i].datetime, 'YYYY-MM-DD').format('MM/DD/YYYY'));
+        console.log(" ")
+        console.log(("Venue         :       ") + data[i].venue.name);
+        console.log(("Location      :       ") + data[i].venue.city + ", " + data[i].venue.country);
+        console.log(("Date          :       ") + moment(data[i].datetime, 'YYYY-MM-DD').format('MM/DD/YYYY')+ "\n");
       };
     };
   });
@@ -65,9 +66,9 @@ function spotifyThisSong() {
     var artist = data.tracks.items[0].artists[0].name;
     var album = data.tracks.items[0].album.name;
     var preview = data.tracks.items[0].preview_url;
-    console.log(("Title  ") + name);
-    console.log(("Artist ") + artist);
-    console.log(("Album  ") + album);
+    console.log(("Title    :     ") + name);
+    console.log(("Artist   :     ") + artist);
+    console.log(("Album    :     ") + album);
     if (preview) {
       console.log("Preview ") + preview;
     } else {
@@ -94,14 +95,15 @@ function movieThis() {
       if (data.Response == "False") return console.log("Invalid Search");
       var actors = data.Actors;
       var actorsArray = actors.split(',');
-      console.log(("Title           ") + data.Title);
-      console.log(("Year            ") + data.Year);
-      console.log(("IMDB            ") + data.imdbRating);
-      console.log(("Rotten Tomatoes ") + data.Ratings[1].Value);
-      console.log(("Produced        ") + data.Country);
-      console.log(("Language        ") + data.Language);
-      console.log(("Plot: ") + data.Plot);
-      console.log("Actors");
+      console.log("")
+      console.log(("Title           :       ") + data.Title);
+      console.log(("Year            :       ") + data.Year);
+      console.log(("IMDB            :       ") + data.imdbRating);
+      console.log(("Rotten Tomatoes :       ") + data.Ratings[1].Value);
+      console.log(("Produced        :       ") + data.Country);
+      console.log(("Language        :       ") + data.Language);
+      console.log(("\nPlot :\n\n") + data.Plot + "\n");
+      console.log("Actors:\n");
       for (var j = 0; j < actorsArray.length; j++) {
         console.log(actorsArray[j].trim());
       };
